@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Textos</title>
+  <meta name="viewport" content="width=device-width">
+  <style>
+    html {
+      font-family: sans-serif;
+      text-align: center
+    }
+
+    body {
+      display: inline-block;
+      text-align: left
+    }
+
+    label,
+    legend {
+      font-weight: bold
+    }
+
+    *:required,
+    .obligatorio {
+      border: thin solid blue
+    }
+
+    input[type=number],
+    .numero {
+      text-align: right
+    }
+
+    dfn {
+      font-weight: bold
+    }
+
+    br+output,
+    fieldset+output,
+    footer,
+    form em {
+      font-size: small
+    }
+
+    .error {
+      color: red
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Esto es un Formulario: </h1>
+  </header>
+
+  
+  
+  <form id="forma" action="javascript:;">
+    <p><em>El borde azul indica obligatorio.</em></p>
+
+    
+    <p>
+      <label accesskey="N">
+        Nombre:<br>
+        <input name="nombre" type="text" autofocus required pattern=".{1,30}" maxlength="30" size="33"
+          placeholder="1 a 30 caracteres">
+      </label>
+      <br><output id="salidaNombre"></output>
+    </p>
+    <p>
+      <label accesskey="U">
+        Usuario<br>
+        <input name="usuario" type="text" pattern="[A-Za-z0-9]{4,16}" maxlength="16" size="19"
+          placeholder="4 a 16 letras o dígitos">
+      </label>
+      <br><output id="salidaUsuario"></output>
+    </p>
+  
+    <p>
+      <label accesskey="C">
+        Correo Electrónico<br>
+        <input name="email" type="email" required size="33">
+      </label>
+      <br><output id="salidaEmail"></output>
+    </p>
+
+    <p>
+      <label accesskey="S">
+        Contraseña:<br>
+        <input name="secreto" type="password" autocomplete="off" pattern=".{5,30}" maxlength="30" size="33"
+          placeholder="5 a 30 caracteres">
+      </label>
+      <br><output id="salidaSecreto"></output>
+    </p>
+
+    <p>
+      <label accesskey="T">
+        Teléfono<br>
+        <input name="telefono" type="tel" pattern="\d{10,12}" maxlength="12" size="17" placeholder="10 a 12 dígitos">
+      </label>
+      <br><output id="salidaTelefono"></output>
+    </p>
+    
+    <p><input type="submit" value="Procesar" accesskey="P"></p>
+  </form>
+
+  <footer>
+    Copyright 2023 Lopez Martinez Miztli Uriel .
+  </footer>
+  <datalist id="navegadores">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+    <option value="Edge">
+  </datalist>
+  <script src="js/CtrlTextos.js"></script>
+</body>
+
+</html>
